@@ -1,5 +1,7 @@
 /*GENERAL SITTINGS----------------------------------------------------------------------------------------------------------*/
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -10,32 +12,31 @@
 
 :root{
     /*-I box general sittings*/
-    --border-outline-S:2px solid;
+    --border-curve:min(3vh,50px);
     --border-outline-D:2px dashed;
+    --border-outline-S:2px solid;
+    --border-r-50:50%;
+    --fit-width-hight: fit-content;
     --padding-margin-N: 1rem;
     --padding-margin-O-RL: 0 1rem;
     --padding-margin-O-TB:1rem 0;
-    --fit-width-hight: fit-content;
     --S-box:100PX;
     --XS-box:200PX;
     --M-box:400PX;
     --XM-box:600PX;
     --L-box:800PX;
     --XL-box:1000PX;
-    --border-r-50:50%;
-    --border-curve:min(3vh,50px);
-    
     /* - II background--------------------------------------------------*/
         
         /* -1 BACK IMAGE-------------------------*/
         
-        --back-img-real-3:url(../practic-f-colums/ee252efb83d584a4d584cfff23bfaa3c.png);
-        --back-img-real-2:url(../practic-f-colums/f58edcec638d593a8e8ecb1777a96b8e.png);
-        --back-img-real1:url(../practic-f-colums/e635d99f59cabb7131cbce30db1220e8.png);
-        --back-img-rayen-goslin:url(../practic-f-colums/c0bd9398e69af42eef3b220cb4f20a30.png);
-        --back-img-siraj-eddin: url(../practic-f-colums/bff448d56cdda3e1c096b7e6fda1ce9f.png);
-        --back-img-chorok-yawm:url(../practic-f-colums/400213258_740785247890832_4006886130926015080_n.jpg);
-        --back-video-eddpeacer:url(../practic-f-colums/ddaa8de9eebc633916f20c9279cab95a.mp4);
+        --back-img-chorok-yawm:url(../pictures/400213258_740785247890832_4006886130926015080_n.jpg);
+        --back-img-rayen-goslin:url(../pictures/c0bd9398e69af42eef3b220cb4f20a30.png);
+        --back-img-real-2:url(../pictures/f58edcec638d593a8e8ecb1777a96b8e.png);
+        --back-img-real-3:url(../pictures/ee252efb83d584a4d584cfff23bfaa3c.png);
+        --back-img-real1:url(../pictures/e635d99f59cabb7131cbce30db1220e8.png);
+        --back-img-siraj-eddin: url(../pictures/bff448d56cdda3e1c096b7e6fda1ce9f.png);
+        --back-video-eddpeacer:url(../pictures/ddaa8de9eebc633916f20c9279cab95a.mp4);
         
         /* -2 BACK COLOR ------------------------*/
         
@@ -83,29 +84,109 @@
 
 }
 
-/*general sittings----------------------------------------------------------------------------------------------------------*/
+/*general block sittings----------------------------------------------------------------------------------------------------------*/
 
 section{
 
+    align-items: var(--justify-align-items-C);
     display: var(--flex);
     flex-flow: var(--non-flexy-coulumn);
     grid-template-columns: 1fr;
     justify-content: var(--justify-align-items-C);
-    align-items: var(--justify-align-items-C);
     padding: var(--padding-margin-O-TB);
 }
-div{
-    width: var(--XS-box);
-    height: var(--XS-box);
-    display: var(--flex);
-    justify-content: var(--justify-align-items-C);
-    align-items: var(--justify-align-items-C);
-    margin: var(--padding-margin-O-TB);
+
+/* ||advanced header sittings---------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*-1 header*/
+    .header{
+        border: var(--border-outline-S)black;
+        
+    }
+    /*2- profile link*/
+    .header__nav{
+        border: var(--border-outline-S);
+        display: var(--flex);
+        justify-content:var(--justify-align-items-C);
+        position: sticky;
+        top: 0;
+        background-color: aquamarine;
+        z-index: 1;
+    }
+    .profile_link{
+        margin-top:1rem ;
+        color: #000000;
+        text-decoration: none;
+        font-weight: 800;
+        padding: var(--padding-margin-N);
+    }
+    /*3- profile link animation*/
+    .profile_link:hover{
+        text-shadow: var(--XS--shadow);
+        box-shadow: var(--XS--shadow);
+        font-size: var(--XS-font);
+        transition: all 1s ;
+        transform: skew(-5deg) rotateY(360deg);
+        margin: var(--padding-margin-N);
+        border: var(--border-outline-S) #0000002d;
+        border-radius: var(--border-curve);
+        padding: var(--padding-margin-N);
+        background-color: rgba(0, 0, 0, 0.036);
+    }
+    /*3- logo*/
+    .header_logo_container{
+        display: var(--flex);
+        justify-content: var(--justify-align-items-C);
+    }
+    .header_logo{
+        display: var(--flex);
+        justify-content: var(--justify-align-items-C);
+        align-items: var(--justify-align-items-C);
+        font-size: 1.5rem;
+        margin: 0.5rem;
+        width: 100px;
+        height: 100px;
+        border-radius:var(--border-r-50);
+        border: var(--border-outline-S);
+        
+    }
     
+/* advanced footer sittings*/
+    /*-1 footer container*/
+    .footer{
+        position: sticky;
+        bottom: 0;
+        background-color: blueviolet;
+        border: var(--border-outline-S)black;
+        display: var(--flex);
+        flex-flow: var(--flexy-boxes);
+        justify-content: var(--justify-align-items-C);
+    }
+    /*2- footer links*/
+    .footer_link{
+        text-decoration: none;
+        color: #000000;
+        font-size: var(--XS-font);
+        padding: var(--padding-margin-N);
+        margin-top: 0.5rem;
+    }
+    /*3- links animation*/
+    .footer_link:hover{
+        padding: 0.25rem;
+        transform: scale(120%) skew(2deg);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.175);
+        border-radius: var(--border-curve);
+    }
+
+/* advanced block sittings(class...)----------------------------------------------------------------------------------------------------------*/
+.div{
+    align-items: var(--justify-align-items-C);
+    display: var(--flex);
+    height: var(--XS-box);
+    justify-content: var(--justify-align-items-C);
+    margin: var(--padding-margin-O-TB);
+    width: var(--XS-box);
 }
-
-/* advanced sittings----------------------------------------------------------------------------------------------------------*/
-
 .div1 , .div3{
     border: var(--border-outline-S);
     border-radius: var(--border-curve);
@@ -116,7 +197,7 @@ div{
     border-radius: var(--border-r-50);
 }
 
-/*div animation---------------------------------------------------------------------------------------------------------------*/
+/*div blocks animation---------------------------------------------------------------------------------------------------------------*/
 
 .div{
     background-position: center;
@@ -125,99 +206,98 @@ div{
     transition: all 2s 0.2s ease-in-out;
 }
 
-/*div1 animation--------------------------------------------------------------------------------------------------------------*/
+/*div1 block animation--------------------------------------------------------------------------------------------------------------*/
 
 
 .div1:hover{
     background-image: var(--back-img-rayen-goslin);
-    font-size:var(--M-font) ;
-    text-shadow: var(--S-shadow)black;
     box-shadow: var(--L--shadow)black;
-    transform: scale(120%);
-    margin: var(--padding-margin-O-TB);
     content:attr(brahim);
+    font-size:var(--M-font) ;
+    margin: var(--padding-margin-O-TB);
     position: relative;
+    text-shadow: var(--S-shadow)black;
+    transform: scale(120%);
 }
 .div1:hover::after {
+    color: #ffffff; 
     content: "cars aren't dreams"; 
+    font-size: var(--S-font); 
+    left: 30%;
     position: absolute;
     top: 10%;
-    left: 30%;
     transform: translate(-50%, -50%);
-    color: #ffffff; 
-    font-size: var(--S-font); 
 }
 
-/*div2 animation--------------------------------------------------------------------------------------------------------------*/
+/*div2 block animation--------------------------------------------------------------------------------------------------------------*/
 
 .div2:hover{
-    text-shadow: var(--XL--shadow);
-    font-size:var(--M-font) ;
     background-image: var(--back-img-siraj-eddin);
+    box-shadow: var(--XL--shadow)black;
+    font-size:var(--M-font) ;
+    text-shadow: var(--S-shadow)black;
+    text-shadow: var(--XL--shadow);
     transform: scale(120%) rotate(360deg);
     transition: all 4s ;
     white-space: nowrap;
-    text-shadow: var(--S-shadow)black;
-    box-shadow: var(--XL--shadow)black;
 }
 .div2:hover::after {
-    content: "siraj-eddin yhibokom filah"; 
-    position: absolute;
-    top: 1%;
-    left: 10%;
     color: #000000; 
+    content: "siraj-eddin yhibokom filah"; 
     font-size: 20px; 
     font-weight: 800;
+    left: 10%;
+    position: absolute;
     text-shadow: var(--XL--shadow) rgb(255, 255, 255);
-    transform: skew(0 , 14deg);
+    top: 1%;
     transform-origin: left bottom;
+    transform: skew(0 , 14deg);
     white-space: nowrap;
     z-index: 1;
 }
 
-/*div3 animation-----------------------------------------------------------------------------------------------------------------*/
+/*div3 block animation-----------------------------------------------------------------------------------------------------------------*/
 
 .div3:hover{
-    text-shadow: var(--XL--shadow);
-    font-size:var(--M-font) ;
-    background-position: -80px center;
     background-image: var(--back-img-chorok-yawm);
-    transform: scale(120%) skew(10deg)  rotateY(360deg) ;
-    white-space: nowrap;
-    transition: 4s;
+    background-position: -80px center;
     box-shadow: var(--XL--shadow)black;
+    font-size:var(--M-font) ;
+    text-shadow: var(--XL--shadow);
+    transform: scale(120%) skew(10deg)  rotateY(360deg) ;
+    transition: 4s;
+    white-space: nowrap;
 }
 .div3:hover::after {
-    content: "MAR 0 - 2 FRA"; 
-    position: absolute;
-    top: 10%;
-    font-weight: 800;
     color: #000000; 
+    content: "MAR 0 - 2 FRA"; 
     font-size: var(--S-font); 
+    font-weight: 800;
+    position: absolute;
     text-shadow: var(--XL--shadow);
+    top: 10%;
 }
 
-/*div4 animation-------------------------------------------------------------------------------------------------------------------*/
+/*div4 block animation-------------------------------------------------------------------------------------------------------------------*/
 
 .div4:hover{
-    text-shadow: var(--XL--shadow);
-    font-size:var(--M-font) ;
-    background-position: -80px center;
     background-image: var(--back-img-real-3);
-    transform: skew(-10deg)  rotateX(360deg) ;
-    white-space: nowrap;
-    transition: 4s;
+    background-position: -80px center;
     box-shadow: var(--XL--shadow)black;
+    font-size:var(--M-font) ;
+    text-shadow: var(--XL--shadow);
+    transform: skew(-10deg)  rotateX(360deg) ;
+    transition: 4s;
+    white-space: nowrap;
 }
 .div4:hover::after {
-    content: "YES!"; 
-    position: absolute;
-    top: 10%;
-    left: 85%;
-    transform: translate(-50%, -50%);
     color: #000000; 
-    font-weight: 800;
+    content: "YES!"; 
     font-size: var(--S-font); 
+    font-weight: 800;
+    left: 85%;
+    position: absolute;
     text-shadow: var(--XL--shadow)rgb(40, 130, 255);
+    top: 10%;
+    transform: translate(-50%, -50%);
 }
-
