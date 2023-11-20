@@ -1,0 +1,223 @@
+/*GENERAL SITTINGS----------------------------------------------------------------------------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    
+}
+/*variables-----------------------------------------------------------------------------------------------------------------*/
+
+:root{
+    /*-I box general sittings*/
+    --border-outline-S:2px solid;
+    --border-outline-D:2px dashed;
+    --padding-margin-N: 1rem;
+    --padding-margin-O-RL: 0 1rem;
+    --padding-margin-O-TB:1rem 0;
+    --fit-width-hight: fit-content;
+    --S-box:100PX;
+    --XS-box:200PX;
+    --M-box:400PX;
+    --XM-box:600PX;
+    --L-box:800PX;
+    --XL-box:1000PX;
+    --border-r-50:50%;
+    --border-curve:min(3vh,50px);
+    
+    /* - II background--------------------------------------------------*/
+        
+        /* -1 BACK IMAGE-------------------------*/
+        
+        --back-img-real-3:url(../practic-f-colums/ee252efb83d584a4d584cfff23bfaa3c.png);
+        --back-img-real-2:url(../practic-f-colums/f58edcec638d593a8e8ecb1777a96b8e.png);
+        --back-img-real1:url(../practic-f-colums/e635d99f59cabb7131cbce30db1220e8.png);
+        --back-img-rayen-goslin:url(../practic-f-colums/c0bd9398e69af42eef3b220cb4f20a30.png);
+        --back-img-siraj-eddin: url(../practic-f-colums/bff448d56cdda3e1c096b7e6fda1ce9f.png);
+        --back-img-chorok-yawm:url(../practic-f-colums/400213258_740785247890832_4006886130926015080_n.jpg);
+        --back-video-eddpeacer:url(../practic-f-colums/ddaa8de9eebc633916f20c9279cab95a.mp4);
+        
+        /* -2 BACK COLOR ------------------------*/
+        
+        --back-color-BLACK:hsl(0, 0%, 0%);
+        --back-color-WHITE:hsl(0, 0%, 100%);
+        --back-color-BLUE:hsl(229, 100%, 50%);
+        --back-color-RED:hsl(0, 100%, 50%);
+        --back-color-YELLOW:hsl(53, 100%, 50%);
+    
+    /*-III box advanced sittings--------------------------------------------*/
+    
+    --justify-align-items-C:center;
+    --justify-C-align-items-E:end;
+    --justify-SA:space-around;
+    --justify-SE:space-evenly;
+    --justify-SB:space-between;
+    
+        /* -1 flex box ---------------------------*/
+        
+        --flex: flex ;
+        --flexy-boxes: row wrap;
+        --non-flexy-boxes:row nowrap;
+        --flexy-coulumn:column wrap;
+        --non-flexy-coulumn:column nowrap;
+        
+    /*-IV TEXT SITTINGS------------------------------*/
+    
+        /*-1 font-size--------------------*/
+        
+        --S-font:1rem;
+        --XS-font:2rem;
+        --M-font:4rem;
+        --XM-font:6rem;
+        --L-font:8rem;
+        --XL-font:10rem;
+        
+        /*-2 text shadow---------------*/
+        
+        --S-shadow:1px 1px 2px;
+        --XS--shadow:2px 2px 3px;
+        --M--shadow:2.5px 2.5px 3.5px;
+        --XM--shadow:3px 3px 4px;
+        --L--shadow:3.25px 3.25px 4.5px;
+        --XL--shadow:3.5px 3.5px 5px;
+
+}
+
+/*general sittings----------------------------------------------------------------------------------------------------------*/
+
+section{
+
+    display: var(--flex);
+    flex-flow: var(--non-flexy-coulumn);
+    grid-template-columns: 1fr;
+    justify-content: var(--justify-align-items-C);
+    align-items: var(--justify-align-items-C);
+    padding: var(--padding-margin-O-TB);
+}
+div{
+    width: var(--XS-box);
+    height: var(--XS-box);
+    display: var(--flex);
+    justify-content: var(--justify-align-items-C);
+    align-items: var(--justify-align-items-C);
+    margin: var(--padding-margin-O-TB);
+    
+}
+
+/* advanced sittings----------------------------------------------------------------------------------------------------------*/
+
+.div1 , .div3{
+    border: var(--border-outline-S);
+    border-radius: var(--border-curve);
+    
+}
+.div2 , .div4{
+    border: var(--border-outline-D);
+    border-radius: var(--border-r-50);
+}
+
+/*div animation---------------------------------------------------------------------------------------------------------------*/
+
+.div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 2s 0.2s ease-in-out;
+}
+
+/*div1 animation--------------------------------------------------------------------------------------------------------------*/
+
+
+.div1:hover{
+    background-image: var(--back-img-rayen-goslin);
+    font-size:var(--M-font) ;
+    text-shadow: var(--S-shadow)black;
+    box-shadow: var(--L--shadow)black;
+    transform: scale(120%);
+    margin: var(--padding-margin-O-TB);
+    content:attr(brahim);
+    position: relative;
+}
+.div1:hover::after {
+    content: "cars aren't dreams"; 
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #ffffff; 
+    font-size: var(--S-font); 
+}
+
+/*div2 animation--------------------------------------------------------------------------------------------------------------*/
+
+.div2:hover{
+    text-shadow: var(--XL--shadow);
+    font-size:var(--M-font) ;
+    background-image: var(--back-img-siraj-eddin);
+    transform: scale(120%) rotate(360deg);
+    transition: all 4s ;
+    white-space: nowrap;
+    text-shadow: var(--S-shadow)black;
+    box-shadow: var(--XL--shadow)black;
+}
+.div2:hover::after {
+    content: "siraj-eddin yhibokom filah"; 
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    color: #000000; 
+    font-size: 20px; 
+    font-weight: 800;
+    text-shadow: var(--XL--shadow) rgb(255, 255, 255);
+    transform: skew(0 , 14deg);
+    transform-origin: left bottom;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/*div3 animation-----------------------------------------------------------------------------------------------------------------*/
+
+.div3:hover{
+    text-shadow: var(--XL--shadow);
+    font-size:var(--M-font) ;
+    background-position: -80px center;
+    background-image: var(--back-img-chorok-yawm);
+    transform: scale(120%) skew(10deg)  rotateY(360deg) ;
+    white-space: nowrap;
+    transition: 4s;
+    box-shadow: var(--XL--shadow)black;
+}
+.div3:hover::after {
+    content: "MAR 0 - 2 FRA"; 
+    position: absolute;
+    top: 10%;
+    font-weight: 800;
+    color: #000000; 
+    font-size: var(--S-font); 
+    text-shadow: var(--XL--shadow);
+}
+
+/*div4 animation-------------------------------------------------------------------------------------------------------------------*/
+
+.div4:hover{
+    text-shadow: var(--XL--shadow);
+    font-size:var(--M-font) ;
+    background-position: -80px center;
+    background-image: var(--back-img-real-3);
+    transform: skew(-10deg)  rotateX(360deg) ;
+    white-space: nowrap;
+    transition: 4s;
+    box-shadow: var(--XL--shadow)black;
+}
+.div4:hover::after {
+    content: "YES!"; 
+    position: absolute;
+    top: 10%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    color: #000000; 
+    font-weight: 800;
+    font-size: var(--S-font); 
+    text-shadow: var(--XL--shadow)rgb(40, 130, 255);
+}
+
