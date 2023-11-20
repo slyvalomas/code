@@ -32,17 +32,6 @@ Carckas Explore is a project designed to experiment with button designs using em
 
 The HTML structure defines the layout of the webpage, including the header, navigation, main content section with buttons, and a footer. The buttons are creatively designed with emojis for a visually engaging experience.
 
-
-
-
-
-
-
-
-
-## General Settings
-
-### Scroll Behavior
 ```css
 html {
     scroll-behavior: smooth;
